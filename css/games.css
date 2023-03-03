@@ -1,0 +1,54 @@
+.games {
+    margin-top: 5%;
+    padding: 0 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 80px 60px;
+}
+
+.game-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.game-link {
+    display: block;
+    position: relative;
+    height: 100%;
+}
+
+.game-link:hover .game-title {
+    opacity: 1;
+}
+
+.game-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 44px;
+
+    color: rgba(89, 27, 42, 0.69);
+
+    text-shadow: .05em .05em 1px rgba(0, 0, 0, 0.65);
+    background: rgba(246, 197, 60, 0.7);
+    border: 11px solid rgba(241, 187, 35, 0.59);
+    opacity: 0;
+    transition: .2s;
+}
