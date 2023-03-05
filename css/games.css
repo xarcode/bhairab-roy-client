@@ -1,3 +1,6 @@
+body{
+    padding-bottom: 100px;
+}
 .games {
     margin-top: 5%;
     padding: 0 60px;
@@ -36,11 +39,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
+
 
 .game-image{
     height: 100%;
     width: 100%;
+    border: 2px solid gray;
 }
 
 .game-title {

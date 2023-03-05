@@ -14,6 +14,10 @@
         rel="stylesheet">
     <link rel="stylesheet" href="./css/games.css">
     <style>
+
+        body{
+            background-color: #f4f3e7;
+        }
         .container{
             display: none;
         }
@@ -33,7 +37,7 @@
             display: none; /* Hidden by default */
             position: fixed; /* Stay in place */
             z-index: 1; /* Sit on top */
-            padding-top: 100px; /* Location of the box */
+            padding-top: 125px; /* Location of the box */
             left: 0;
             top: 0;
             width: 100%; /* Full width */
@@ -43,11 +47,12 @@
             background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
         }   
         .modal-content {
-        background-color: #fefefe;
-        margin: auto;
-        padding: 20px;
-        border: 1px solid #888;
-        width: 80%;
+            margin: auto;
+            padding: 40px;
+            width: 50%;
+            background-color: #f4f3e7;
+            border: 5px #f7c43c solid;
+            border-radius: 20px;
         }
 
         /* The Close Button */
@@ -64,6 +69,57 @@
         text-decoration: none;
         cursor: pointer;
         }
+
+        .modal-content h2,p, li{
+            text-align: center;
+            margin: 20px 0;
+            font-size: 18px;
+            padding: 0 30px;
+            list-style-type: none;
+        }
+        .modal-content h2{
+            font-family: Montserrat;
+            margin-bottom: 30px;
+            font-size: 40px;
+        }
+
+        /* TITLE BUTTON CSS */
+        .overview{
+            display: flex;
+            flex-direction: column;
+            margin-top: -80px;
+        }
+        .overview h3{
+            text-align: center;
+            font-family: Montserrat;
+            text-decoration: underline rgb(150, 150, 150);
+            color: rgb(86, 86, 86);
+        }
+        .overview-btn{
+            margin: auto;
+        }
+        .modal-btn{
+            margin: 40px 0 0 7px;
+            height: 50px;
+            width: 200px;
+            background-color: none;
+            border-radius: 50px;
+            cursor: pointer;
+            border: 2px solid #872f45;
+            background-color: transparent;
+            
+            color: #591B2A;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);
+        }
+        .modal-btn:hover{
+            transition: all .3s;
+            border: 2px solid #591B2A;
+            background-color: #591B2A;
+            color: #ffffff;
+        }
+
     </style>
 </head>
 
@@ -71,7 +127,7 @@
     <nav class="navbar">
         <div class="nav-items">
             <div class="nav-item"><a href="./index.html">Home</a></div>
-            <div class="nav-item"><a href="./resume.html">Resume</a></div>
+            <div class="nav-item"><a href="./aboutme.html">About Me</a></div>
             <div class="nav-item nav-item-active"><a href="./games.html">Games</a></div>
         </div>
         <div class="nav-items social-links">
@@ -83,8 +139,9 @@
     <div class="games" id="gamess">
         <div class="game-item" onclick="gameload()">
             <a href="Platformer2023/index.html" target="myframe" class="game-link">
-                <img src="./assets/images/mathias-takacs-crunch 1.png" alt="game-image" class="game-image">
-                <div class="game-title">Game Title</div>
+                <img src="../assets/gameBanner/PlatformRunner.png" alt="game-image" class="game-image">
+                <div class="game-title"><h2>PLatform Runner</h2>
+                </div>
             </a>
         </div>
         <div class="game-item" onclick="gameload()">
@@ -122,28 +179,52 @@
         <div class="modals">
             <div id="myModal" class="modal">
             
-                <!-- Modal content -->
+                <!-- Modal content GAME DESCRIPTION-->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <p>Some text in the Modal..</p>
+                    <h2>Game Walkthrough</h2>
+                    <p>Get ready to experience the excitement of our platform runner game! As the nimble runner, your goal is to navigate through levels filled with obstacles and enemies, collecting coins and power-ups along the way to unlock new characters and abilities.</p>
+
+                    <p>With challenging pits to jump over, obstacles to dodge, and enemies to defeat, you'll need quick reflexes and precise timing to make it to the finish line. </p>
+                  
+                    <p>   Are you ready to put your skills to the test and take on the ultimate platform runner challenge? Lace up your virtual shoes and get ready to run, jump, and slide your way to victory!</p>
                 </div>
             
             </div>
             <div id="myModal2" class="modal">
             
-                <!-- Modal content -->
+                <!-- Modal content GAME RULES-->
                 <div class="modal-content">
                     <span class="close">&times;</span>
-                    <p>Other text in modal..</p>
+                    <h2>Game Rules</h2>
+                    <ul>
+                        <li>1. The goal of the game is to navigate through challenging levels while collecting coins reaching the end of each level.</li>
+                        <li>2. The player must use quick reflexes and precise timing to jump over pits, dodge obstacles, and defeat enemies.</li>
+                        <li>3. Upgrading characters and abilities is crucial to overcoming challenges, including epic boss battles.</li>
+                        <li>4. Avoid touching obstacles or falling into pits, which will result in losing a life. Players must strategize and be careful to not lose all their lives.</li>
+                        <li>5. Try to achieve the highest score possible by collecting as many coins and power-ups as you can and reaching the end of each level as quickly as possible.</li>
+                    </ul>
+
                 </div>
             
             </div>
-            <div class="btn" id="desc">
-                <button>Description</button>
+
+            <div class="overview">
+                <h3>Game Overview</h3>
+                <div class="overview-btn" id="desc">
+                    <button class="modal-btn">Walkthrough</button>
+                </div>
+                
+                <div class="overview-btn" id="desc2">
+                    <button class="modal-btn">Rules</button>
+                </div>
+                
+                <div class="overview-btn" id="desc3">
+                    <button class="modal-btn" onclick="location.href='../games.html'">Back</button>
+                </div>
+                
             </div>
-            <div class="btn" id="desc2">
-                <button>Rules</button>
-            </div>
+            
         </div>
         <iframe src="" frameborder="0" name="myframe" width="1000px" height="696px"></iframe>
     </div>
