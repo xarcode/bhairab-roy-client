@@ -14,14 +14,78 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="./css/games.css">
+        <!-- <style>
+            .container{
+                display: none;
+            }
+            #one,
+            #two,
+            #three,
+            #four{
+                display: none;
+            }
+            .modals{
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+            button{
+                width: 100px;
+                height: 50px;
+                margin-bottom: 30px;
+                margin-left: 50px;
+            }
+            .modal {
+                display: none; /* Hidden by default */
+                position: fixed; /* Stay in place */
+                z-index: 1; /* Sit on top */
+                padding-top: 100px; /* Location of the box */
+                left: 0;
+                top: 0;
+                width: 100%; /* Full width */
+                height: 100%; /* Full height */
+                overflow: auto; /* Enable scroll if needed */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+            }   
+            .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            }
 
+            /* The Close Button */
+            .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+            }
+        </style> -->
+        <style>
+            #one,
+            #two,
+            #three,
+            #four{
+                display: none;
+            }
+        </style>
 </head>
 
 <body>
     <nav class="navbar">
         <div class="nav-items">
             <div class="nav-item"><a href="./index.html">Home</a></div>
-            <div class="nav-item"><a href="./aboutme.html">About Me</a></div>
             <div class="nav-item nav-item-active"><a href="./games.html">Games</a></div>
         </div>
         <div class="nav-items social-links">
@@ -31,6 +95,373 @@
         </div>
     </nav>
     <div class="games" id="gamess">
+        <div class="game-item" onclick="gameload('1')">
+            <a href="Platformer2023/index.html" target="myframe" class="game-link">
+                <img src="../assets/gameBanner/PlatformRunner.png" alt="game-image" class="game-image">
+                <div class="game-title"><h2>Platform Runner</h2>
+                </div>
+            </a>
+        </div>
+        <div class="game-item" onclick="gameload('2')">
+            <a href="Burger2/index.html" target="myframe" class="game-link">
+                <img src="./assets/gameBanner/burger2.png" alt="game-image" class="game-image">
+                <div class="game-title"><h2>Burger Dash</h2></div>
+            </a>
+        </div>
+        <div class="game-item" onclick="gameload('3')">
+            <a href="EndlessCatRunner/index.html" target="myframe" class="game-link">
+                <img src="./assets/gameBanner/endlessCat.png" alt="game-image" class="game-image">
+                <div class="game-title"><h2>Endless Cat</h2></div>
+            </a>
+        </div>
+        <div class="game-item" onclick="gameload('4')">
+            <a href="GemsRunner/index.html" target="myframe" class="game-link">
+                <img src="./assets/gameBanner/gemsRun.png" alt="game-image" class="game-image">
+                <div class="game-title"><h2>Gems Run</h2></div>
+            </a>
+        </div>
+        <div class="game-item" onclick="">
+            <div target="" class="game-link-coming-soon">
+                <!-- <img src="./assets/images/coming soon.png" alt="game-image" class="game-image"> -->
+                <div class="game-title-coming-soon"><h2>Coming Soon!</h2></div>
+                <div class="game-image-coming-soon"></div>
+            </div>
+        </div>
+        <div class="game-item" onclick="">
+            <div target="myframe" class="game-link-coming-soon">
+                <!-- <img src="./assets/images/coming soon.png" alt="game-image" class="game-image"> -->
+                <div class="game-title-coming-soon"><h2>Coming Soon!</h2></div>
+                <div class="game-image-coming-soon"></div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="container">
+        <div class="modals" id="one">
+            <div id="myModal" class="modal"> 
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Game Walkthrough</h2>
+                    <p>Get ready to experience the excitement of our platform runner game! As the nimble runner, your goal is to navigate through levels filled with obstacles and enemies, collecting coins and power-ups along the way to unlock new characters and abilities.</p>
+
+                    <p>With challenging pits to jump over, obstacles to dodge, and enemies to defeat, you'll need quick reflexes and precise timing to make it to the finish line. </p>
+                  
+                    <p>   Are you ready to put your skills to the test and take on the ultimate platform runner challenge? Lace up your virtual shoes and get ready to run, jump, and slide your way to victory!</p>
+                </div>
+            </div>
+            <div id="myModal2" class="modal">
+            
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Game Rules</h2>
+                    <ul>
+                        <li>1. The goal of the game is to navigate through challenging levels while collecting coins reaching the end of each level.</li>
+                        <li>2. The player must use quick reflexes and precise timing to jump over pits, dodge obstacles, and defeat enemies.</li>
+                        <li>3. Upgrading characters and abilities is crucial to overcoming challenges, including epic boss battles.</li>
+                        <li>4. Avoid touching obstacles or falling into pits, which will result in losing a life. Players must strategize and be careful to not lose all their lives.</li>
+                        <li>5. Try to achieve the highest score possible by collecting as many coins and power-ups as you can and reaching the end of each level as quickly as possible.</li>
+                    </ul>
+                </div>
+            
+            </div>
+            <div class="overview">
+                <h3>Game Overview</h3>
+                <div class="overview-btn" id="desc">
+                    <button class="modal-btn">Walkthrough</button>
+                </div>
+                
+                <div class="overview-btn" id="desc2">
+                    <button class="modal-btn">Rules</button>
+                </div>
+                
+                <div class="overview-btn" id="">
+                    <button class="modal-btn" onclick="location.href='../games.html'">Back</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modals" id="two">
+            <div id="myModal1" class="modal"> 
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Game Walkthrough</h2>
+                    <p>You are a brave burger who escaped from the kitchen. But the knives and forks are after you! Dodge them as you dash through the desert. How long can you survive in this thrilling game? </p>
+                    
+                    <p>Challenge your friends and see who can get the highest score in this fun and addictive game. Just click the play button to start, press the spacebar to jump and avoid the forks. Enjoy!🍔</p>
+
+                </div>
+            </div>
+            <div id="myModal12" class="modal">
+            
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Game Rules</h2>
+                    <ul>
+                        <li>1. The game starts when you click play. You can press the spacebar to make your burger jump over the knives and forks.</li>
+                        <li>2. The game ends when you hit a knife or a fork. You have only one life and no extra lives. You have to be careful and quick to survive as long as possible.</li>
+                        <li>3. Your score is based on how far you run. You can see your current score on the top right corner of the screen. You can also see your best score on the bottom right corner of the screen.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="overview">
+                <h3>Game Overview</h3>
+                <div class="overview-btn" id="desc1">
+                    <button class="modal-btn">Walkthrough</button>
+                </div>
+                
+                <div class="overview-btn" id="desc12">
+                    <button class="modal-btn">Rules</button>
+                </div>
+                
+                <div class="overview-btn" id="">
+                    <button class="modal-btn" onclick="location.href='../games.html'">Back</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modals" id="three">
+            <div id="myModaltwo" class="modal"> 
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Game Walkthrough</h2>
+                    <p>Join the cat-tastic adventure in this endless platformer game! Run, jump, and dodge your way through a colorful world full of enemy foxes and sparkling diamonds. How far can you go before you run out of lives? Press spacebar to jump over obstacles and gaps, and collect as many diamonds as you can to increase your score. Be careful: the foxes will try to stop you, and the speed will get faster as you progress. This game is easy to play but hard to master. Can you beat your own high score and become the ultimate cat hero?</p>
+
+                </div>
+            </div>
+            <div id="myModal22" class="modal">
+            
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Game Rules</h2>
+                    <ul>
+                        <li>1. The game starts with the cat running on a scrolling landscape. The landscape will have gaps, platforms, foxes, and diamonds.</li>
+                        <li>2. The cat has 5 health points (hp) at the beginning of the game. The hp is shown at the top left corner of the screen.</li>
+                        <li>3. The player can press spacebar to make the cat jump. The cat can jump over gaps, platforms, and foxes. The cat cannot jump over the edge of the screen or fall into a gap.</li>
+                        <li>4. The player can collect diamonds by touching them with the cat. Each diamond is worth 10 points. The score is shown at the top right corner of the screen.</li>
+                        <li>5. The player can avoid foxes by jumping over them or running past them. If the cat touches a fox, it will lose 1 hp and flash briefly. If the cat loses all its hp, the game is over.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="overview">
+                <h3>Game Overview</h3>
+                <div class="overview-btn" id="desctwo">
+                    <button class="modal-btn">Walkthrough</button>
+                </div>
+                
+                <div class="overview-btn" id="desc22">
+                    <button class="modal-btn">Rules</button>
+                </div>
+                
+                <div class="overview-btn" id="">
+                    <button class="modal-btn" onclick="location.href='../games.html'">Back</button>
+                </div>
+                
+            </div>
+        </div>
+        <div class="modals" id="four">
+            <div id="myModal3" class="modal"> 
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Game Walkthrough</h2>
+                    <p>Gems Run is an endless platformer game where you control a hero who runs through an infinite maze of platforms, collecting gems and shooting enemies. The enemies are ghosts who can shoot fireballs at you, so you have to be quick and agile to avoid them. You can either kill the ghosts with your gun or jump and dodge them. The more gems you collect, the higher your score will be. But be careful - don’t fall off the platforms or get hit by fireballs!</p>
+                    <p>Gems Run is a fun and challenging game that tests your reflexes and skills. How far can you run? How many gems can you collect? How many ghosts can you defeat? Find out in Gems Run!</p>
+
+                </div>
+            </div>
+            <div id="myModal32" class="modal">
+            
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Game Rules</h2>
+                    <ul>
+                        <li>1. The game starts with the hero running on a platform. The platforms are randomly generated and have different lengths and heights.</li>
+                        <li>2. The user can press the space bar to make the hero jump.</li>
+                        <li>3. The user can click the mouse to make the hero shoot his gun. The gun has unlimited ammo</li>
+                        <li>4. The hero can collect gems that are scattered on the platforms. The score is displayed on the top right corner of the screen.</li>
+                        <li>5. The player has 5 hp initially. If the player gets hit by a fireball or hits a ghost, he loses one hp. </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="overview">
+                <h3>Game Overview</h3>
+                <div class="overview-btn" id="desc3">
+                    <button class="modal-btn">Walkthrough</button>
+                </div>
+                
+                <div class="overview-btn" id="desc32">
+                    <button class="modal-btn">Rules</button>
+                </div>
+                
+                <div class="overview-btn" id="">
+                    <button class="modal-btn" onclick="location.href='../games.html'">Back</button>
+                </div>
+                
+            </div>
+        </div>
+        <!-- <div class="modals" id="four">
+            <div id="myModal3" class="modal">
+        
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Some text in the Modal of game 4..</p>
+                </div>
+        
+            </div>
+            <div id="myModal32" class="modal">
+        
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Other text in modal of game 4..</p>
+                </div>
+        
+            </div>
+            <div class="btn" id="desc3">
+                <button>Description</button>
+            </div>
+            <div class="btn" id="desc32">
+                <button>Rules</button>
+            </div>
+        </div> -->
+        <iframe src="" frameborder="0" name="myframe" width="1000px" height="696px"></iframe>
+    </div>
+    <script>
+        var modal = document.getElementById("myModal");
+        var modal2 = document.getElementById("myModal2");
+        var modal1 = document.getElementById("myModal1");
+        var modal12 = document.getElementById("myModal12");
+        var modaltwo = document.getElementById("myModaltwo");
+        var modal22 = document.getElementById("myModal22");
+        var modal3 = document.getElementById("myModal3");
+        var modal32 = document.getElementById("myModal32");
+            // Get the button that opens the modal
+            var btn = document.getElementById("desc");
+            var btn2 = document.getElementById("desc2");
+            var btn1 = document.getElementById("desc1");
+            var btn12 = document.getElementById("desc12");
+            var btntwo = document.getElementById("desctwo");
+            var btn22 = document.getElementById("desc22");
+            var btn3 = document.getElementById("desc3");
+            var btn32 = document.getElementById("desc32");
+
+            // Get the <span> element that closes the modal
+            var span = document.getElementsByClassName("close")[0];
+            var span2 = document.getElementsByClassName("close")[1];
+
+            var span1 = document.getElementsByClassName("close")[2];
+            var span12 = document.getElementsByClassName("close")[3];
+
+            var spantwo = document.getElementsByClassName("close")[4];
+            var span22 = document.getElementsByClassName("close")[5];
+
+            var span3 = document.getElementsByClassName("close")[6];
+            var span32 = document.getElementsByClassName("close")[7];
+            // When the user clicks the button, open the modal 
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
+            btn2.onclick = function () {
+                modal2.style.display = "block";
+            }
+            btn1.onclick = function () {
+                modal1.style.display = "block";
+            }
+            btn12.onclick = function () {
+                modal12.style.display = "block";
+            }
+            btntwo.onclick = function () {
+                modaltwo.style.display = "block";
+            }
+            btn22.onclick = function () {
+                modal22.style.display = "block";
+            }
+            btn3.onclick = function () {
+                modal3.style.display = "block";
+            }
+            btn32.onclick = function () {
+                modal32.style.display = "block";
+            }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function () {
+                modal.style.display = "none";
+            }
+            span2.onclick = function () {
+                modal2.style.display = "none";
+            }
+            span1.onclick = function () {
+                modal1.style.display = "none";
+            }
+            span12.onclick = function () {
+                modal12.style.display = "none";
+            }
+            spantwo.onclick = function () {
+                modaltwo.style.display = "none";
+            }
+            span22.onclick = function () {
+                modal22.style.display = "none";
+            }
+            span3.onclick = function () {
+                modal3.style.display = "none";
+            }
+            span32.onclick = function () {
+                modal32.style.display = "none";
+            }
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+                if(event.target ==  modal2)
+                {
+                    modal2.style.display = "none";
+                }
+                if (event.target == modal1) {
+                    modal1.style.display = "none";
+                }
+                if(event.target ==  modal12)
+                {
+                    modal12.style.display = "none";
+                }
+                if (event.target == modaltwo) {
+                    modaltwo.style.display = "none";
+                }
+                if(event.target ==  modal22)
+                {
+                    modal22.style.display = "none";
+                }
+                if (event.target == modal3) {
+                    modal3.style.display = "none";
+                }
+                if(event.target ==  modal32)
+                {
+                    modal32.style.display = "none";
+                }
+            }
+        function gameload(x) {
+            document.getElementById('gamess').style.display = "none";
+            document.getElementById('container').style.display = "flex";
+            switch(x)
+            {
+                case '1' :  document.getElementById('one').style.display = "flex";
+                            break;
+                case '2' :  document.getElementById('two').style.display = "flex";
+                            break;
+                case '3' :  document.getElementById('three').style.display = "flex";
+                            break;
+                case '4' :  document.getElementById('four').style.display = "flex";
+                            break;
+                default : break;
+            }
+        }
+    </script>
+    <!-- <div class="games" id="gamess">
         <div class="game-item" onclick="gameload()">
             <a href="Platformer2023/index.html" target="myframe" class="game-link">
                 <img src="../assets/gameBanner/PlatformRunner.png" alt="game-image" class="game-image">
@@ -73,7 +504,6 @@
         <div class="modals">
             <div id="myModal" class="modal">
             
-                <!-- Modal content GAME DESCRIPTION-->
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Game Walkthrough</h2>
@@ -87,7 +517,6 @@
             </div>
             <div id="myModal2" class="modal">
             
-                <!-- Modal content GAME RULES-->
                 <div class="modal-content">
                     <span class="close">&times;</span>
                     <h2>Game Rules</h2>
@@ -161,7 +590,7 @@
             document.getElementById('gamess').style.display = "none";
             document.getElementById('container').style.display = "flex";
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
